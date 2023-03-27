@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
+import { API_KEY } from '../config';
 
 const API_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
-const API_KEY = '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';
 
 const headers = {
   'Content-Type': 'application/json',
