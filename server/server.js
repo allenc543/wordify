@@ -3,10 +3,11 @@ const app = express();
 const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Word = require('./model')
+const Word = require('./model');
+const {mongoURI} = require('./serverconfig');
 
 //connect to db
-mongoose.connect('mongodb+srv://allenc543:zaqxswcde@cluster0.dwja8bn.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(res => {
         console.log('DB CONNECTED')
     })
